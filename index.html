@@ -6,103 +6,105 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<div class="card">
-      <div class="search">
-        <input type="text" placeholder="enter city name" spellcheck="false">
-        <button><img src="images/icons-search.png" alt=""></button>
-      </div>
-    <div class="weather">
-        <img src="images/icons-rain.png" class="weather-icon" alt="">
-        <h1 class="temp">100°C</h1>
-        <h2 class="city">Chicago</h2>
-        <div class="details">
-            <div class="col">
-                <img src="images/icons-humidity.png" alt="">
-                <div>
-                    <p class="humidity">50%</p>
+    <div class="card">
+          <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="images/icons-search.png" alt=""></button>
+          </div>
+        <div class="weather">
+            <img src="images/icons-rain.png" class="weather-icon" alt="">
+            <h1 class="temp">32°C</h1>
+            <h2 class="city">Chicago</h2>
+            <div class="details">
+                <div class="col">
+                  <img src="images/icons-humidity.png" alt="">
+                  <div>
+                    <p class="humidity">30%</p>
                     <p>Humidity</p>
+                  </div>
                 </div>
-            </div>
-            <div class="col">
-                <img src="images/icons-wind.png" alt="">
-                <div>
-                    <p class="wind">35 km/h</p>
+                <div class="col">
+                  <img src="images/icons-wind.png" alt="">
+                  <div>
+                    <p class="wind">3.5 km/h</p>
                     <p>Wind Speed</p>
+                  </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="forecast">
-        <div class="card">
-            <p><strong>Forecast</strong></p>
-            <div class="row">
-                <div class="column">
-                  <div class="card">
-                    <img src="images/icons-rain.png" alt="">
-                    <h3>Monday</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="card">
-                    <img src="images/icons-rain.png" alt="">
-                    <h3>Tuesday</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="card">
-                    <img src="images/icons-rain.png" alt="">
-                    <h3>Wednesday</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="card">
-                    <img src="images/icons-rain.png" alt="">
-                    <h3>Thursday</h3>
-                    <p>Some text</p>
-                    <p>Some text</p>
-                  </div>
-                </div>
-                <div class="column">
-                    <div class="card">
+        <div class="forecast">
+            <div class="card">
+                <p><strong>Forecast</strong></p>
+                <div class="row">
+                    <div class="column">
+                      <div class="card">
                         <img src="images/icons-rain.png" alt="">
-                      <h3>Friday</h3>
-                      <p>Some text</p>
-                      <p>Some text</p>
+                        <h3>Monday</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card">
+                    <div class="column">
+                      <div class="card">
                         <img src="images/icons-rain.png" alt="">
-                      <h3>Satuday</h3>
-                      <p>Some text</p>
-                      <p>Some text</p>
+                        <h3>Tuesday</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="images/icons-rain.png" alt="">
+                        <h3>Wednesday</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="images/icons-rain.png" alt="">
+                        <h3>Thursday</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="images/icons-rain.png" alt="">
+                        <h3>Friday</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="images/icons-rain.png" alt="">
+                        <h3>Satuday</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="images/icons-rain.png" alt="">
+                        <h3>Sunday</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="column">
-                    <div class="card">
-                      <img src="images/icons-rain.png" alt="">
-                      <h3>Sunday</h3>
-                      <p>Some text</p>
-                      <p>Some text</p>
-                    </div>
-                  </div>
-              </div>
+            </div>
         </div>
     </div>
-</div>
-
     <script>
-        const apiKey = "my_api_key_here";
-        const apiURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=chicago";
+        const apiKey = "my_api_her";
+        const apiURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+
+        const search_box = document.querySelector(".search input");
+        const search_btn = document.querySelector(".search button");
 
         async function _checkWeather(city) {
-            const resp = await fetch(apiURL + `&appid=${apiKey}`);
+            const resp = await fetch(apiURL + city + `&appid=${apiKey}`);
             var data = await resp.json();
 
             console.log(data);
@@ -112,8 +114,10 @@
             document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
             document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
         }
-        _checkWeather();
-
+        search_btn.addEventListener("click", ()=>{
+          _checkWeather(search_box.value);
+        })
+        
     </script>
   </body>
 </html>
