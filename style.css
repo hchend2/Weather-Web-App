@@ -7,11 +7,223 @@
 
 body {
     background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    
+    font-family: 'Popins', sans-serif;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+}
+.container {
+    padding: 20px 70px;
+    color: #fff;
+}
+
+.current-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-container .time {
+    font-size: 70px;
+    font-weight: 100;
+}
+.date-container #am-pm {
+    font-size: 30px;
+    margin-left: 20px;
+}
+.date-container .date {
+    font-size: 30px;
+}
+.place-container {
+    text-align: end;
+}
+.place-container .time-zone {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info .others {
+    display: flex;
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px #eee;
+}
+.current-info .others .weather-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .future-forecast {
+    background: rgba(24, 24, 27, 0.8);
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color: white;
+    width: 10px;
+    align-items: center;
+    justify-content: center;
+} */
+
+.card-right .today {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    padding: 50px ;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px #eee;
+}
+/* .card-right .today .day {
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+} */
+/* .card-right .today .temp-night {
+    font-size: 18px;
+    padding-top: 15px;
+}
+.card-right .today .temp-day {
+    font-size: 18px;
+    padding-top: 15px;
+} */
+.future-forecast .weather-forecast {
+    display: flex;
+}
+
+.weather-forecast .weather-forecast-item {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 35px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.weather-forecast .weather-forecast-item .day {
+    padding: 5px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp {
+    font-weight: 100;
+}
+
+@media only screen and (max-width:1000px) {
+    .future-forecast {
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .future-forecast {
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+
+}
+
+.card {
+    width: 100%;
+    max-width: 2400px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 30px auto 5; 
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-align: center;
+
+    /* background: rgba(24, 24, 27, 0.6); */
+    
+    border: 1px #eee;
+
+
+}
+
+.card-left {
+    display:  flex;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-right: 2px solid hsl(200, 100%, 10%);
+}
+.card-right {
+    display: grid;
+    width: 40%;
+    justify-content: space-around;
+    
+    background: rgba(24, 24, 27, 0.6);
+    padding: 15px ;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px #eee;
+
+    /* gap: 0.5rem;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto); */
+}
+
+/* #footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    
+    height: 40px;
+    background: grey;
+} */
+
+/* .card-right .today {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+  
+  /* *{
     margin: 0;
+    padding: 0;
+    font-family: 'Popins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    
     font-family: sans-serif;
     background: linear-gradient(135deg, #00feba, #5b548a);
 }
-/* .card {
+.container {
+    padding: 20px 70px;
+    color: #fff;
+}
+ .card {
     width: 100%;
     max-width: 1400px;
     background: linear-gradient(135deg, #00feba, #5b548a);
@@ -20,10 +232,9 @@ body {
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+} 
 
-} */
-
-.header {
+ .header {
     display: flex;
     align-items: center;
 }
@@ -44,7 +255,7 @@ body {
     margin: 0.5rem;
     padding: 0.5rem;
     border-right: 2px solid hsl(200, 100%, 10%);
-}
+} 
 
 .info-group {
     display: flex;
@@ -158,30 +369,30 @@ body {
     margin-top: -6px;
 }
 
-/* Float four columns side by side */
+
 .column {
     float: left;
     width: 25%;
     padding: 0 10px;
   }
   
-  /* Remove extra left and right margins, due to padding */
+  
   .row {
     margin: 0 -5px;
    }
   
-  /* Clear floats after the columns */
+ 
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
   
-  /* Responsive columns */
+  
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
       display: block;
       margin-bottom: 20px;
     }
-  }
+  } */
