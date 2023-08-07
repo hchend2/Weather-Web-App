@@ -1,3 +1,4 @@
+
 const time_element = document.getElementById('time');
 const date_element = document.getElementById('date');
 const currentweather_element = document.getElementById('current-weather-items');
