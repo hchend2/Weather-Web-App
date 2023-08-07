@@ -9,7 +9,7 @@ const country_element = document.getElementById('country');
 const weatherforecast_element = document.getElementById('wather-forecast');
 const currenttemp_element = document.getElementById('current_temp');
 
-const api_key = "1bca2ee8d893bd3f07c21a737df3a1a2";
+const api_key = "my_api_key";
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
