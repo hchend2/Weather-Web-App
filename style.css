@@ -7,181 +7,164 @@
 
 body {
     background: #fff;
-    margin: 0;
-    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    
+    font-family: 'Popins', sans-serif;
     background: linear-gradient(135deg, #00feba, #5b548a);
 }
-/* .card {
-    width: 100%;
-    max-width: 1400px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+.container {
+    padding: 20px 70px;
     color: #fff;
-    margin: 100px auto 0; 
-    border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
+}
 
-} */
+.current-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-container .time {
+    font-size: 70px;
+    font-weight: 100;
+}
+.date-container #am-pm {
+    font-size: 30px;
+    margin-left: 20px;
+}
+.date-container .date {
+    font-size: 30px;
+}
+.place-container {
+    text-align: end;
+}
+.place-container .time-zone {
+    font-size: 30px;
+    font-weight: 100;
+}
 
-.header {
+.place-container .country {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info .others {
+    display: flex;
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px #eee;
+}
+.current-info .others .weather-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-right .today {
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    padding: 50px ;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px #eee;
+}
+/* .card-right .today .day {
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+} */
+/* .card-right .today .temp-night {
+    font-size: 18px;
+    padding-top: 15px;
+}
+.card-right .today .temp-day {
+    font-size: 18px;
+    padding-top: 15px;
+} */
+.future-forecast .weather-forecast {
+    display: flex;
 }
 
-.card-right {
-    display: grid;
-    width: 50%;
-    justify-content: space-around;
-    gap: 0.5rem;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
+.weather-forecast .weather-forecast-item {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 35px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
 }
+.weather-forecast .weather-forecast-item .day {
+    padding: 5px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp {
+    font-weight: 100;
+}
+
+@media only screen and (max-width:1000px) {
+    .future-forecast {
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .future-forecast {
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+
+}
+
+.card {
+    width: 100%;
+    max-width: 2400px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 30px auto 5; 
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    /* background: rgba(24, 24, 27, 0.6); */
+    border: 1px #eee;
+}
+
 .card-left {
     display:  flex;
-    width: 40%;
+    width: 45%;
     align-items: center;
     justify-content: center;
     margin: 0.5rem;
     padding: 0.5rem;
     border-right: 2px solid hsl(200, 100%, 10%);
 }
-
-.info-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.current-temp {
-    font-size: 3rem;
-}
-
-.day-section {
+.card-right {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 155px);
-    gap: 0.5rem;
-    justify-content: center;
-    padding: 1rem;
+    width: 40%;
+    justify-content: space-around;
+    
+    background: rgba(24, 24, 27, 0.6);
+    padding: 15px ;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px #eee;
+    /* gap: 0.5rem;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto); */
 }
-
-.day-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid hsl(200, 100%, 10%);
-    border-radius: 0.75rem;
-    padding: 0.50rem;
-}
-
-.hour-section {
-    width: 100%;
-    text-align: center;
-    border-spacing: 0;
-}
-
-.hour-row {
-    background-color: hsl(200, 100%, 75%);
-}
-.hour-row:nth-child(2n) {
-    background-color: hsl(200, 100%, 70%);
-}
-
-.search {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.search input {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    color: #555;
-    padding: 10px 25px;
-    height:  60px;
-    border-radius: 30px;
-    flex: 1;
-    margin-right: 16px;
-    font-size: 18px;
-}
-
-.search button {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-}
-
-.search button img {
-    width: 40px;
-}
-.weather-icon {
-    width: 130px;
-    margin-top: 30px;
-}
-.weather h1 {
-    font-size: 80px;
-    font-weight: 500;
-}
-.weather h2 {
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: -10px;
-}
-
-.details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 50px;
-
-}
-
-.col {
-    display: flex;
-    align-items: center;
-    text-align: left;
-}
-
-.col img {
-    width:  40px;
-    margin-right: 10px;
-}
-
-.humidity, .wind {
-    font-size: 28px;
-    margin-top: -6px;
-}
-
-/* Float four columns side by side */
-.column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {
-    margin: 0 -5px;
-   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
