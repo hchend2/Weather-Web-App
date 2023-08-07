@@ -9,7 +9,7 @@ const country_element = document.getElementById('country');
 const weatherforecast_element = document.getElementById('wather-forecast');
 const currenttemp_element = document.getElementById('current_temp');
 
-const api_key = "my_api_key";
+const api_key = "api_key_here";
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -100,5 +100,5 @@ function showweatherInfo(data) {
   })
   weatherforecast_element.innerHTML = next_dayscast;
 }
-
+// check ...
 getWeathInfo();
